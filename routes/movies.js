@@ -31,6 +31,7 @@ router.post(
         .pattern(/^(https?:\/\/)?([\w-]{1,32}\.[\w-]{1,32})[^\s@]*$/),
       nameRU: Joi.string().required(),
       nameEN: Joi.string().required(),
+      movieId: Joi.number().required(),
     }),
   }),
   createMovie,
