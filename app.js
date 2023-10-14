@@ -30,6 +30,7 @@ if (NODE_ENV === 'production') {
       origin: [
         'https://drsvetanaumova.nomoredomainsicu.ru',
         'http://drsvetanaumova.nomoredomainsicu.ru',
+        // 'https://api.nomoreparties.co/beatfilm-movies',
       ],
     }),
   );

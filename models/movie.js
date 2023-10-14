@@ -70,6 +70,12 @@ const movieSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Поле "nameEN" должно быть заполнено'],
     },
+
+    // NEW!
+    movieId: {
+      type: Number,
+      required: [true, 'Поле "year" должно быть заполнено'],
+    },
   },
 
   { versionKey: false }
