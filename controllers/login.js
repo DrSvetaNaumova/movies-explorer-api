@@ -11,7 +11,7 @@ module.exports.login = async (req, res, next) => {
     const token = jwt.sign(
       { _id: user._id },
       NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
-      { expiresIn: '7d' }
+      { expiresIn: '7d' },
     );
     return res.status(200).send({ token });
   } catch (err) {

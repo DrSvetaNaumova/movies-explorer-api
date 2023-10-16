@@ -52,7 +52,7 @@ module.exports.createMovie = async (req, res, next) => {
 module.exports.deleteMovie = async (req, res, next) => {
   try {
     const movie = await Movie.findById(req.params.movieId).orFail(
-      new NotFoundDataError('Фильм не существует.')
+      new NotFoundDataError('Фильм не существует.'),
     );
     if (String(movie.owner) !== String(req.user._id)) {
       throw new ForbiddenError('Нет прав для удаления фильма.');
